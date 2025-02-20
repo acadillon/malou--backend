@@ -4,7 +4,8 @@
   "info": {
     "singularName": "vitrail",
     "pluralName": "vitrails",
-    "displayName": "Vitrail"
+    "displayName": "Vitrail",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +22,7 @@
       "type": "text"
     },
     "descriptionEn": {
-      "type": "string"
+      "type": "text"
     },
     "technique": {
       "type": "string"
@@ -48,14 +49,15 @@
       "inversedBy": "vitrails"
     },
     "medias": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
