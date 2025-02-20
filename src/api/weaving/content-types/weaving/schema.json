@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weavings",
+  "info": {
+    "singularName": "weaving",
+    "pluralName": "weavings",
+    "displayName": "Weaving",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "titleEn": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "descriptionEn": {
+      "type": "text"
+    },
+    "technique": {
+      "type": "string"
+    },
+    "techniqueEn": {
+      "type": "string"
+    },
+    "materials": {
+      "type": "string"
+    },
+    "materialsEn": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    },
+    "actus": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::actu.actu",
+      "inversedBy": "weavings"
+    },
+    "medias": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "loomOff": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "height": {
+      "type": "string"
+    }
+  }
+}
