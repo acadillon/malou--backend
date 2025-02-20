@@ -701,6 +701,7 @@ export interface ApiVitrailVitrail extends Struct.CollectionTypeSchema {
     singularName: 'vitrail';
     pluralName: 'vitrails';
     displayName: 'Vitrail';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -709,7 +710,7 @@ export interface ApiVitrailVitrail extends Struct.CollectionTypeSchema {
     title: Schema.Attribute.String;
     titleEn: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    descriptionEn: Schema.Attribute.String;
+    descriptionEn: Schema.Attribute.Text;
     technique: Schema.Attribute.String;
     techniqueEn: Schema.Attribute.String;
     materials: Schema.Attribute.String;
