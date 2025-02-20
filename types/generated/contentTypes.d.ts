@@ -1,36 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface ApiAboutAbout extends Struct.SingleTypeSchema {
-  collectionName: 'abouts';
-  info: {
-    singularName: 'about';
-    pluralName: 'abouts';
-    displayName: 'About';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    bio: Schema.Attribute.Text;
-    email: Schema.Attribute.Email;
-    phone: Schema.Attribute.BigInteger;
-    address: Schema.Attribute.Text;
-    credits: Schema.Attribute.Text;
-    update: Schema.Attribute.BigInteger;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    publishedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Struct.CollectionTypeSchema {
   collectionName: 'files';
   info: {
@@ -526,6 +495,338 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiAboutAbout extends Struct.SingleTypeSchema {
+  collectionName: 'abouts';
+  info: {
+    singularName: 'about';
+    pluralName: 'abouts';
+    displayName: 'About';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bio: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    credits: Schema.Attribute.Text;
+    update: Schema.Attribute.BigInteger;
+    network: Schema.Attribute.String;
+    bioEn: Schema.Attribute.Text;
+    creditsEn: Schema.Attribute.Text;
+    city: Schema.Attribute.String;
+    studio: Schema.Attribute.String;
+    cityEn: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiActuActu extends Struct.CollectionTypeSchema {
+  collectionName: 'actus';
+  info: {
+    singularName: 'actu';
+    pluralName: 'actus';
+    displayName: 'Actu';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    startDate: Schema.Attribute.Date;
+    endDate: Schema.Attribute.Date;
+    eventDate: Schema.Attribute.DateTime;
+    structure: Schema.Attribute.String;
+    city: Schema.Attribute.String;
+    cityEn: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    countryEn: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
+    volumes: Schema.Attribute.Relation<'manyToMany', 'api::volume.volume'>;
+    paintings: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::painting.painting'
+    >;
+    weavings: Schema.Attribute.Relation<'manyToMany', 'api::weaving.weaving'>;
+    poetries: Schema.Attribute.Relation<'manyToMany', 'api::poetry.poetry'>;
+    vitrails: Schema.Attribute.Relation<'manyToMany', 'api::vitrail.vitrail'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::actu.actu'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
+  collectionName: 'categories';
+  info: {
+    singularName: 'category';
+    pluralName: 'categories';
+    displayName: 'Category';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    titleEn: Schema.Attribute.String;
+    actu: Schema.Attribute.Relation<'manyToOne', 'api::actu.actu'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPaintingPainting extends Struct.CollectionTypeSchema {
+  collectionName: 'paintings';
+  info: {
+    singularName: 'painting';
+    pluralName: 'paintings';
+    displayName: 'Painting';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    titleEn: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    descriptionEn: Schema.Attribute.Text;
+    technique: Schema.Attribute.String;
+    techniqueEn: Schema.Attribute.String;
+    materials: Schema.Attribute.String;
+    materialsEn: Schema.Attribute.String;
+    width: Schema.Attribute.String;
+    medias: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    actus: Schema.Attribute.Relation<'manyToMany', 'api::actu.actu'>;
+    height: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::painting.painting'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
+  collectionName: 'poetries';
+  info: {
+    singularName: 'poetry';
+    pluralName: 'poetries';
+    displayName: 'Poetry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    titleEn: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    descriptionEn: Schema.Attribute.Text;
+    technique: Schema.Attribute.String;
+    materials: Schema.Attribute.String;
+    materialsEn: Schema.Attribute.String;
+    width: Schema.Attribute.String;
+    height: Schema.Attribute.String;
+    medias: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    actus: Schema.Attribute.Relation<'manyToMany', 'api::actu.actu'>;
+    techniqueEn: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::poetry.poetry'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVitrailVitrail extends Struct.CollectionTypeSchema {
+  collectionName: 'vitrails';
+  info: {
+    singularName: 'vitrail';
+    pluralName: 'vitrails';
+    displayName: 'Vitrail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    titleEn: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    descriptionEn: Schema.Attribute.String;
+    technique: Schema.Attribute.String;
+    techniqueEn: Schema.Attribute.String;
+    materials: Schema.Attribute.String;
+    materialsEn: Schema.Attribute.String;
+    width: Schema.Attribute.String;
+    height: Schema.Attribute.String;
+    actus: Schema.Attribute.Relation<'manyToMany', 'api::actu.actu'>;
+    medias: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vitrail.vitrail'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVolumeVolume extends Struct.CollectionTypeSchema {
+  collectionName: 'volumes';
+  info: {
+    singularName: 'volume';
+    pluralName: 'volumes';
+    displayName: 'Volume';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    titleEn: Schema.Attribute.String;
+    descriptionEn: Schema.Attribute.Text;
+    technique: Schema.Attribute.String;
+    techniqueEn: Schema.Attribute.String;
+    materials: Schema.Attribute.String;
+    materialsEn: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    width: Schema.Attribute.String;
+    actus: Schema.Attribute.Relation<'manyToMany', 'api::actu.actu'>;
+    medias: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    height: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::volume.volume'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWeavingWeaving extends Struct.CollectionTypeSchema {
+  collectionName: 'weavings';
+  info: {
+    singularName: 'weaving';
+    pluralName: 'weavings';
+    displayName: 'Weaving';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    titleEn: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    descriptionEn: Schema.Attribute.Text;
+    technique: Schema.Attribute.String;
+    techniqueEn: Schema.Attribute.String;
+    materials: Schema.Attribute.String;
+    materialsEn: Schema.Attribute.String;
+    width: Schema.Attribute.String;
+    actus: Schema.Attribute.Relation<'manyToMany', 'api::actu.actu'>;
+    medias: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    loomOff: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    height: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::weaving.weaving'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -898,7 +1199,6 @@ export interface AdminTransferTokenPermission
 declare module '@strapi/strapi' {
   export module Public {
     export interface ContentTypeSchemas {
-      'api::about.about': ApiAboutAbout;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
@@ -909,6 +1209,14 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about.about': ApiAboutAbout;
+      'api::actu.actu': ApiActuActu;
+      'api::category.category': ApiCategoryCategory;
+      'api::painting.painting': ApiPaintingPainting;
+      'api::poetry.poetry': ApiPoetryPoetry;
+      'api::vitrail.vitrail': ApiVitrailVitrail;
+      'api::volume.volume': ApiVolumeVolume;
+      'api::weaving.weaving': ApiWeavingWeaving;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;

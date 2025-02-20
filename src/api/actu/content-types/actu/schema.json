@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "actus",
+  "info": {
+    "singularName": "actu",
+    "pluralName": "actus",
+    "displayName": "Actu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "eventDate": {
+      "type": "datetime"
+    },
+    "structure": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "cityEn": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "countryEn": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "actu"
+    },
+    "volumes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::volume.volume",
+      "mappedBy": "actus"
+    },
+    "paintings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::painting.painting",
+      "mappedBy": "actus"
+    },
+    "weavings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::weaving.weaving",
+      "mappedBy": "actus"
+    },
+    "poetries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::poetry.poetry",
+      "mappedBy": "actus"
+    },
+    "vitrails": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::vitrail.vitrail",
+      "mappedBy": "actus"
+    }
+  }
+}

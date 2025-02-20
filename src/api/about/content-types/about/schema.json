@@ -18,17 +18,32 @@
     "email": {
       "type": "email"
     },
-    "phone": {
-      "type": "biginteger"
-    },
-    "address": {
-      "type": "text"
-    },
     "credits": {
       "type": "text"
     },
     "update": {
       "type": "biginteger"
+    },
+    "network": {
+      "type": "string"
+    },
+    "bioEn": {
+      "type": "text"
+    },
+    "creditsEn": {
+      "type": "text"
+    },
+    "city": {
+      "type": "string"
+    },
+    "studio": {
+      "type": "string"
+    },
+    "cityEn": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }
