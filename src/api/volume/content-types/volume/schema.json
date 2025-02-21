@@ -58,6 +58,10 @@
     },
     "height": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "poetry",
     "pluralName": "poetries",
-    "displayName": "Poetry"
+    "displayName": "Poetry",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -39,14 +40,15 @@
       "type": "string"
     },
     "medias": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "actus": {
       "type": "relation",
@@ -56,6 +58,10 @@
     },
     "techniqueEn": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

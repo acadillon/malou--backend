@@ -638,6 +638,7 @@ export interface ApiPaintingPainting extends Struct.CollectionTypeSchema {
     >;
     actus: Schema.Attribute.Relation<'manyToMany', 'api::actu.actu'>;
     height: Schema.Attribute.String;
+    slug: Schema.Attribute.UID;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -660,6 +661,7 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
     singularName: 'poetry';
     pluralName: 'poetries';
     displayName: 'Poetry';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -680,6 +682,7 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
     >;
     actus: Schema.Attribute.Relation<'manyToMany', 'api::actu.actu'>;
     techniqueEn: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -723,6 +726,7 @@ export interface ApiVitrailVitrail extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    slug: Schema.Attribute.UID<'title'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -766,6 +770,7 @@ export interface ApiVolumeVolume extends Struct.CollectionTypeSchema {
       true
     >;
     height: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -813,6 +818,7 @@ export interface ApiWeavingWeaving extends Struct.CollectionTypeSchema {
       true
     >;
     height: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
