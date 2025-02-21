@@ -90,7 +90,8 @@
       "mappedBy": "actus"
     },
     "slug": {
-      "type": "string"
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
