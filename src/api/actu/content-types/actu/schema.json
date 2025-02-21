@@ -88,6 +88,9 @@
       "relation": "manyToMany",
       "target": "api::vitrail.vitrail",
       "mappedBy": "actus"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }

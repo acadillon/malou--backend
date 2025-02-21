@@ -566,6 +566,7 @@ export interface ApiActuActu extends Struct.CollectionTypeSchema {
     weavings: Schema.Attribute.Relation<'manyToMany', 'api::weaving.weaving'>;
     poetries: Schema.Attribute.Relation<'manyToMany', 'api::poetry.poetry'>;
     vitrails: Schema.Attribute.Relation<'manyToMany', 'api::vitrail.vitrail'>;
+    slug: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
