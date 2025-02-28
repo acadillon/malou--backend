@@ -119,7 +119,8 @@
       }
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "required": true
     }
   }
 }
