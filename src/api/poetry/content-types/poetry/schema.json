@@ -24,23 +24,7 @@
         }
       }
     },
-    "titleEn": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "description": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "descriptionEn": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -57,14 +41,6 @@
       }
     },
     "materials": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "materialsEn": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -109,14 +85,6 @@
       "relation": "manyToMany",
       "target": "api::actu.actu",
       "inversedBy": "poetries"
-    },
-    "techniqueEn": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "slug": {
       "type": "uid",

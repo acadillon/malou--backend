@@ -64,23 +64,7 @@
         }
       }
     },
-    "cityEn": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "country": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "countryEn": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

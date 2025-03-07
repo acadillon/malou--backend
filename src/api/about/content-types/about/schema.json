@@ -56,22 +56,6 @@
         }
       }
     },
-    "bioEn": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "creditsEn": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "city": {
       "type": "string",
       "pluginOptions": {
@@ -81,14 +65,6 @@
       }
     },
     "studio": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "cityEn": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
