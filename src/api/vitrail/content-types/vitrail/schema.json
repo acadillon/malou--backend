@@ -24,23 +24,7 @@
         }
       }
     },
-    "titleEn": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "description": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "descriptionEn": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -56,23 +40,7 @@
         }
       }
     },
-    "techniqueEn": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "materials": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "materialsEn": {
       "type": "string",
       "pluginOptions": {
         "i18n": {

@@ -24,14 +24,6 @@
         }
       }
     },
-    "titleEn": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "actu": {
       "type": "relation",
       "relation": "manyToOne",
