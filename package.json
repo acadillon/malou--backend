@@ -8,8 +8,7 @@
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "start": "strapi start",
-    "strapi": "strapi",
-    "preinstall": "nvm use 20 || true"
+    "strapi": "strapi"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.1.0",
