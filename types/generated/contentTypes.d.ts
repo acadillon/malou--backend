@@ -722,10 +722,9 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    pathClose: Schema.Attribute.String;
-    pathOpen: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    svgPath: Schema.Attribute.JSON;
     technique: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

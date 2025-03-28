@@ -115,11 +115,8 @@
         }
       }
     },
-    "pathOpen": {
-      "type": "string"
-    },
-    "pathClose": {
-      "type": "string"
+    "svgPath": {
+      "type": "json"
     }
   }
 }
