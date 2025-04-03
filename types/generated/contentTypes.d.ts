@@ -581,6 +581,42 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
+  collectionName: 'homepages';
+  info: {
+    description: '';
+    displayName: 'Homepage';
+    pluralName: 'homepages';
+    singularName: 'homepage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::homepage.homepage'
+    >;
+    paintings: Schema.Attribute.Relation<'oneToMany', 'api::painting.painting'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    vitrails: Schema.Attribute.Relation<'oneToMany', 'api::vitrail.vitrail'>;
+    volumes: Schema.Attribute.Relation<'oneToMany', 'api::volume.volume'>;
+    weavings: Schema.Attribute.Relation<'oneToMany', 'api::weaving.weaving'>;
+  };
+}
+
 export interface ApiPaintingPainting extends Struct.CollectionTypeSchema {
   collectionName: 'paintings';
   info: {
@@ -722,6 +758,7 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    poemsPreviews: Schema.Attribute.Component<'poems.poem', true>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     svgPath: Schema.Attribute.JSON;
@@ -1552,6 +1589,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::actu.actu': ApiActuActu;
       'api::category.category': ApiCategoryCategory;
+      'api::homepage.homepage': ApiHomepageHomepage;
       'api::painting.painting': ApiPaintingPainting;
       'api::poetry.poetry': ApiPoetryPoetry;
       'api::vitrail.vitrail': ApiVitrailVitrail;
