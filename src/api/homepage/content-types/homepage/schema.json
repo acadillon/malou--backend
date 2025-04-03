@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "volumes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::volume.volume"
+    },
+    "vitrails": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vitrail.vitrail"
+    },
+    "weavings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::weaving.weaving"
+    },
+    "paintings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::painting.painting"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_poems_lines",
+  "info": {
+    "displayName": "Line",
+    "icon": "feather",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "line": {
+      "type": "string"
+    }
+  }
+}

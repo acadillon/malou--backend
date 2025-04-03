@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_poems_poems",
+  "info": {
+    "displayName": "Poem",
+    "icon": "handHeart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Lines": {
+      "type": "component",
+      "repeatable": true,
+      "component": "poems.line"
+    },
+    "defaultTitle": {
+      "type": "string",
+      "default": "poem"
+    }
+  }
+}
