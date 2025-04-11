@@ -17,6 +17,11 @@ export default ({ env }) => ({
                 uploadStream: {},
                 delete: {},
             },
+            breakpoints: {
+                thumbnail: 245, // par défaut
+                small: 500,
+                large: 1200,
+              },
         },
     },
 });
