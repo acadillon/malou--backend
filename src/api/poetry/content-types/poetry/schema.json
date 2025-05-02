@@ -122,6 +122,9 @@
       "type": "component",
       "repeatable": true,
       "component": "poems.poem"
+    },
+    "credit": {
+      "type": "string"
     }
   }
 }
