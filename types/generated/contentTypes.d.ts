@@ -672,7 +672,7 @@ export interface ApiPaintingPainting extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     technique: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
