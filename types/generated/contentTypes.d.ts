@@ -464,7 +464,7 @@ export interface ApiActuActu extends Struct.CollectionTypeSchema {
   };
   attributes: {
     categories: Schema.Attribute.Relation<
-      'oneToMany',
+      'manyToMany',
       'api::category.category'
     >;
     city: Schema.Attribute.String &
@@ -559,7 +559,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    actu: Schema.Attribute.Relation<'manyToOne', 'api::actu.actu'>;
+    actus: Schema.Attribute.Relation<'manyToMany', 'api::actu.actu'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -951,6 +951,7 @@ export interface ApiVolumeVolume extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    thickness: Schema.Attribute.String;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

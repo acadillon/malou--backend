@@ -33,3 +33,4 @@ declare module '@strapi/strapi' {
     }
   }
 }
+
