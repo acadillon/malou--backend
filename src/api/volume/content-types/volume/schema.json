@@ -120,6 +120,9 @@
     },
     "thickness": {
       "type": "string"
+    },
+    "variousFormats": {
+      "type": "boolean"
     }
   }
 }

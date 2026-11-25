@@ -688,6 +688,7 @@ export interface ApiPaintingPainting extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    variousFormats: Schema.Attribute.Boolean;
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -779,6 +780,7 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    variousFormats: Schema.Attribute.Boolean;
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -871,6 +873,7 @@ export interface ApiVitrailVitrail extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    variousFormats: Schema.Attribute.Boolean;
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -961,6 +964,7 @@ export interface ApiVolumeVolume extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    variousFormats: Schema.Attribute.Boolean;
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1062,6 +1066,7 @@ export interface ApiWeavingWeaving extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    variousFormats: Schema.Attribute.Boolean;
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
