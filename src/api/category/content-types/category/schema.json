@@ -24,9 +24,9 @@
         }
       }
     },
-    "actu": {
+    "actus": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::actu.actu",
       "inversedBy": "categories"
     }

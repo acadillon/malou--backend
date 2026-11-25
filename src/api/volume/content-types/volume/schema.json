@@ -117,6 +117,9 @@
     },
     "credit": {
       "type": "string"
+    },
+    "thickness": {
+      "type": "string"
     }
   }
 }
