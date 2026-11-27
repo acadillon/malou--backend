@@ -648,7 +648,7 @@ export interface ApiPaintingPainting extends Struct.CollectionTypeSchema {
     height: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -668,7 +668,7 @@ export interface ApiPaintingPainting extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -692,19 +692,19 @@ export interface ApiPaintingPainting extends Struct.CollectionTypeSchema {
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     year: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     zoomImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
@@ -741,7 +741,7 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
     height: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -749,7 +749,7 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
     materials: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     medias: Schema.Attribute.Media<
@@ -758,7 +758,7 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     poemsPreviews: Schema.Attribute.Component<'poems.poem', true>;
@@ -784,19 +784,19 @@ export interface ApiPoetryPoetry extends Struct.CollectionTypeSchema {
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     year: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     zoomImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
@@ -833,7 +833,7 @@ export interface ApiVitrailVitrail extends Struct.CollectionTypeSchema {
     height: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -853,7 +853,7 @@ export interface ApiVitrailVitrail extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -877,19 +877,19 @@ export interface ApiVitrailVitrail extends Struct.CollectionTypeSchema {
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     year: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     zoomImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
@@ -926,7 +926,7 @@ export interface ApiVolumeVolume extends Struct.CollectionTypeSchema {
     height: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -943,7 +943,7 @@ export interface ApiVolumeVolume extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -968,19 +968,19 @@ export interface ApiVolumeVolume extends Struct.CollectionTypeSchema {
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     year: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     zoomImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
@@ -1017,7 +1017,7 @@ export interface ApiWeavingWeaving extends Struct.CollectionTypeSchema {
     height: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -1031,7 +1031,7 @@ export interface ApiWeavingWeaving extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     materials: Schema.Attribute.String &
@@ -1046,7 +1046,7 @@ export interface ApiWeavingWeaving extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -1070,19 +1070,19 @@ export interface ApiWeavingWeaving extends Struct.CollectionTypeSchema {
     width: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     year: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     zoomImg: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
   };
